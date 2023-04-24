@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Compteur</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    form{
+        display: flex;
+        flex-flow: row wrap;
+        width: 550px;
+    }
+    .compteur, .bouton, .envoyer{
+        display: flex;
+    }
+    .bouton{
+        flex-direction: column;
+    }
+    #compteur{
+        width: 50px;
+        border-radius: 6px 0 0 6px;
+        border: 1px solid grey;
+    }
+    /* to hide + and- into input*/
+    input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    }
+    /* to hide + and- into input fo Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    #compteur-plus, #compteur-moins {
+        border: none;
+        background-color: #DC9F96;
+        color: white;
+        border-radius: 0 6px 0 0;
+        display: flex;
+
+
+    }
+    #compteur-moins {
+        border: none;
+        background-color: #DC9F96;
+        color: white;
+        border-radius: 0 0 6px 0;
+    }
+    .envoyer{
+        border: none;
+        background-color: #E0B9B4;
+        color: white;
+        border-radius: 6px;
+        margin: 0;
+        padding: 5px;
+        align-items: center;
+    }
+
+    </style>
+  </head>
+  <body>
+    <form id="compteur-form" action="votre-action.php" method="post">
+        <div class="compteur">
+            <input type="number" id="compteur" name="compteur" value="0">
+        </div>
+        <div class="bouton">           
+            <button type="button" id="compteur-plus">+</button>
+            <button type="button" id="compteur-moins">-</button>
+        </div> &nbsp;&nbsp;&nbsp; 
+        <div class="envoyer">
+           <button type="submit" class="envoyer">OK</button>
+        </div>
+    </form>
+    <script>
+      const compteurInput = document.getElementById('compteur');
+      const plusButton = document.getElementById('compteur-plus');
+      const moinsButton = document.getElementById('compteur-moins');
+
+      plusButton.addEventListener('click', () => {
+        compteurInput.value = parseInt(compteurInput.value) + 1;
+      });
+
+      moinsButton.addEventListener('click', () => {
+        compteurInput.value = parseInt(compteurInput.value) - 1;
+      });
+    </script>
+  </body>
+</html>
