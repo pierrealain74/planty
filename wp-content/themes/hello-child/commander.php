@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupération des valeurs du formulaire
-    $compteur = $_POST["compteur"];
+    $compteurfraise = $_POST["compteur-fraise"];
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $email = $_POST["email"];
@@ -11,12 +11,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ville = $_POST["ville"];
 
     // Vérification des données reçues
-    if (empty($nom) || empty($prenom) || empty($email) || empty($adresse) || empty($cp) || empty($ville)) {
+   /*  if (empty($nom) || empty($prenom) || empty($email) || empty($adresse) || empty($cp) || empty($ville)) {
         echo "Veuillez remplir tous les champs obligatoires";
-    } else {
+    } else { */
 
-            echo "Merci $prenom $nom, votre commande de $compteur article(s) a été enregistrée et sera livrée à l'adresse suivante : $adresse, $cp $ville. Un email de confirmation vous a été envoyé à l'adresse $email.";
-        }
+            echo "Merci $prenom $nom, votre commande de $compteurfraise article(s) a été enregistrée et sera livrée à l'adresse suivante : $adresse, $cp $ville. Un email de confirmation vous a été envoyé à l'adresse $email.";
+        
 
         /* // Envoi d'un e-mail de confirmation
         $to = $email;
