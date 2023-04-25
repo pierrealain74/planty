@@ -10,17 +10,17 @@
  *
  * @return void
  */
-function hello_elementor_child_enqueue_scripts() {
-	wp_enqueue_style(
-		'hello-elementor-child-style',
-		get_stylesheet_directory_uri() . '/style.css',
-		[
-			'hello-elementor-theme-style',
-		],
-		'1.0.0'
-	);
+
+ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles');    
+function theme_enqueue_styles() {
+
+	// Chargement du style.css du thème parent Hell Elementor
+		wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+
+		wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/theme.css', array(), filemtime(get_stylesheet_directory() . '/theme.css'));
+
 }
-add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts', 20 );    
+
 
 /* afficher le menu admin que si user connecté */
 
@@ -35,6 +35,7 @@ function hello_elementor_child_menu_args( $args ) {
 add_filter( 'wp_nav_menu_args', 'hello_elementor_child_menu_args' );
 
 /* afficher un footer diff selon la page */
+
 /* function isPageCommander( $args ) {
 
 if(is_page( 'commander' )){
