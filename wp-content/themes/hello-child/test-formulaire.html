@@ -63,8 +63,9 @@
   </head>
   <body>
     <form id="compteur-form" action="votre-action.php" method="post">
+        <!--1***********-->
         <div class="compteur">
-            <input type="number" id="compteur" name="compteur" value="0">
+            <input type="number" id="compteur1" name="compteur" value="0">
         </div>
         <div class="bouton">           
             <button type="button" id="compteur-plus">+</button>
@@ -73,19 +74,35 @@
         <div class="envoyer">
            <button type="submit" class="envoyer">OK</button>
         </div>
+        <!--2***********-->
+        <div class="compteur">
+          <input type="number" id="compteur2" name="compteur" value="0">
+      </div>
+      <div class="bouton">           
+          <button type="button" id="compteur-plus">+</button>
+          <button type="button" id="compteur-moins">-</button>
+      </div> &nbsp;&nbsp;&nbsp; 
+      <div class="envoyer">
+         <button type="button" class="envoyer">OK</button>
+      </div>
     </form>
     <script>
-      const compteurInput = document.getElementById('compteur');
+
+
+      const compteurInput1 = document.getElementById('compteur1');
       const plusButton = document.getElementById('compteur-plus');
       const moinsButton = document.getElementById('compteur-moins');
 
       plusButton.addEventListener('click', () => {
-        compteurInput.value = parseInt(compteurInput.value) + 1;
+        compteurInput1.value = parseInt(compteurInput1.value) + 1;
       });
 
       moinsButton.addEventListener('click', () => {
-        compteurInput.value = parseInt(compteurInput.value) - 1;
+        compteurInput1.value = parseInt(compteurInput1.value) - 1;
       });
+
+
+
     </script>
   </body>
 </html>

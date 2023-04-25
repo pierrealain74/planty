@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formidentitelivraison input[type=text]{ 
+            border-radius: 8px;
+            height: 40px;
+            width: 250px;
+            border: 1px solid grey;
+        }
+        .formidentitelivraison{
+            display: flex;
+            gap: 25px;
+        }
+        .identite{
+            display: flex;
+            flex-direction: column;
+            padding-right: 25px;
+            gap: 8px;
+            border-right: 1px solid grey;
+        }
+        .livraison{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form id="test" action="votre-action.php" method="post">
+        <div class="formidentitelivraison">
+            <div class="identite">
+                <h4>Vos informations</h4>
+                <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom">
+                <label for="prenom">Prenom</label>
+                    <input type="text" id="prenom" name="nom">
+                <label for="email">Email</label>
+                    <input type="text" id="email" name="nom">
+            </div>
+            <div class="livraison">
+                <h4>Livraison</h4>
+                <label for="adresse">Adresse</label>           
+                    <input type="text" id="adresse" name="nom">
+                <label for="cp">Code postale</label>
+                    <input type="text" id="cp" name="nom">
+                <label for="ville">Ville</label>
+                    <input type="text" id="ville" name="nom">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

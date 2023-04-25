@@ -159,7 +159,7 @@ div.wpforms-container-full button[type="submit"]:not(:hover):not(:active){
 #compteur-form{
   display: flex;
   flex-flow: row wrap;
-  width: 550px;
+  width: 100%;
 }
 .compteur, .bouton, .envoyer{
   display: flex;
@@ -175,7 +175,7 @@ div.wpforms-container-full button[type="submit"]:not(:hover):not(:active){
   font-family: "syne", sans-serif;
   
 }
-/* to hide + and- into input*/
+/* to hide + and - into input*/
 #compteur-form input[type=number]::-webkit-inner-spin-button {
 -webkit-appearance: none;
 appearance: none;
@@ -212,7 +212,7 @@ margin: 0;
   border-radius: 0 0 6px 0;
   height: 25px;
 }
-.envoyer{
+#compteur-form .envoyer button[type=button]{
   border: none;
   background-color: #E0B9B4;
   color: white;
@@ -220,6 +220,48 @@ margin: 0;
   margin: 0;
   padding: 0 14px;
   align-items: center;
+  width: 75px;
+}
+.envoyer-form{
+  display: flex;
+  justify-content: center;
+}
+.envoyer-form > button[type=submit]{
+  border: none;
+  background-color: #E0B9B4;
+  color: white;
+  border-radius: 6px;
+  margin: 0;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+/*page commander formulaire */
+
+.formidentitelivraison input[type=text]{ 
+  border-radius: 8px;
+  height: 60px;
+  width: 330px;
+  border: 1px solid grey;
+
+
+}
+.formidentitelivraison{
+  display: flex;
+  gap: 85px;
+  color:white;
+}
+.identite{
+  display: flex;
+  flex-direction: column;
+  padding-right: 95px;
+  gap: 15px;
+  border-right: 1px solid white;
+}
+.livraison{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /*Footer*/
