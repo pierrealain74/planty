@@ -272,13 +272,14 @@ footer {
 footer::before {
   content: "";
   background-image: url("assets/images/cannettes-footer.png");
+  /* background-color: #EBE2DA; */
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 145px;
-  z-index: -1;
+  height: 138px;
+  z-index: 1;
 }
 
 /*Responsive*/
