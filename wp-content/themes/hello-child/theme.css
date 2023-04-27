@@ -1,6 +1,7 @@
 
 :root {
     --bg-rose: #ece2da;
+    font-size: 15px;
   }
   
   .test {
@@ -49,7 +50,14 @@
       font-variant: small-caps;
       word-wrap: break-word;
     }
-  .fraise::before {
+  
+    /*petit parametres introuvable dans l'UI qui est forcé ici*/
+
+    .elementor-column-gap-wide > .elementor-column > .elementor-element-populated {
+      padding: 10px !important;
+    }
+  
+    .fraise::before {
     content: "fraise";
     position: absolute;
     top: 50%;
@@ -83,12 +91,18 @@
     right: 0;
     transform: translateY(-50%);
   }
-  .p{
+  .lettre-p{
     color: transparent; /* masquer le texte de la lettre P */
-    position: relative;
-    font-size: 235px;
-    font-weight: 700;
-    font-family: arial, sans-serif;
+    
+  }
+
+  .elementor-element.elementor-element-25cb0f6 .elementor-heading-title,
+  .elementor-element.elementor-element-56f1533 .elementor-heading-title,  
+  .elementor-element.elementor-element-3688383 .elementor-heading-title{
+    font-family: "Tahoma", Sans-serif;
+    font-size: 200px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
   .fathia {
     background-image: url('assets/images/fathia.png');
@@ -100,12 +114,10 @@
     background-image: url('assets/images/marc.png');
   }
   .card {
-    position: absolute;
-    top: -100px;
-    left: 0;
     background-size: contain;
-    background-position: center center;
+    background-position: 0 0;
     background-clip: text; 
+    background-repeat: no-repeat;
     -webkit-background-clip: text; 
     text-fill-color: transparent; 
   }
@@ -127,12 +139,28 @@
     position: relative;
     z-index: 1;
   }
-  .feuilles{
-    position: absolute;
-    top: -231px;
-    left: -188px;
-  
+
+  #wpforms-form-341{
+    background-image: url("assets/images/houx.png");
+    background-position: -30px 390px;
+    background-repeat: no-repeat;
+    max-width: 500px;
+    padding: 0 50px;
   }
+  /*   .feuilles{
+    position: relative;
+  }
+  .feuilles::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("assets/images/feuilles2.png");
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+  
+  } */
   
   .wpforms-submit-container {
     text-align: center;
@@ -252,7 +280,7 @@
   }
   
   /*Footer*/
-  footer {
+/*   footer {
     position: relative;
     padding-top: 0;
   }
@@ -260,14 +288,14 @@
     content: "";
     background-image: url("assets/images/cannettes-footer.png");
     /* background-color: #EBE2DA; */
-    background-size: cover;
+   /* background-size: cover;
     position: absolute;
     top: -180px;
     left: 0;
     width: 100%;
     height: 180px;
     z-index: 1;
-  }
+  } */
 
   .affichecommande{
     background-color: #3B8E46;
@@ -278,19 +306,70 @@
   }
   
   /*Responsive*/
-  /* @media screen and (min-width: 320px) and (max-width: 782px){
-      .wp-block-site-logo img {
-          height: auto;
-          min-width: 100%;
-          padding: 0.5rem;
-          }
-          body .is-layout-flex > * {
-          margin: 0;
-          }
-          .wp-container-4.wp-container-4 {
-  
-          flex-direction: column;
-          }
-      
+
+/*   @media screen and (min-width: 450px) and (max-width: 782px){
+
+    .content-card{
+      display: flex;
+      flex-flow: row;
+      flex-wrap: nowrap;
+    }
+    .card{
+      display: flex;
+    }
+    .p{
+      display: flex;
+    }
+
   } */
+  @media screen and (min-width: 461px) and (max-width: 782px){
   
+    .fruit {
+      position: relative;
+      color: white;
+      font-size: 3.5rem;
+    }
+    .pamplemouse::before {
+      padding: 110px;
+    } 
+    .framboise::before {
+      padding: 150px;
+    }
+    
+    #menuheader li:last-child {
+      padding: 0 0;
+    }
+
+    /* Lettre P : centrée et agrandie*/
+    .elementor-element.elementor-element-25cb0f6 .elementor-heading-title,
+    .elementor-element.elementor-element-56f1533 .elementor-heading-title,  
+    .elementor-element.elementor-element-3688383 .elementor-heading-title{
+      font-size: 576px;
+      text-align: center;
+      width: 100%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 460px){
+  
+  .fruit {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+  }
+  .pamplemouse::before {
+    padding: 30px;
+  } 
+  .framboise::before {
+    padding: 42px;
+  }  
+  
+  /* Lettre P : centrée et agrandie*/
+    .elementor-element.elementor-element-25cb0f6 .elementor-heading-title,
+    .elementor-element.elementor-element-56f1533 .elementor-heading-title,  
+    .elementor-element.elementor-element-3688383 .elementor-heading-title{
+      font-size: 360px;
+      text-align: center;
+      width: 100%;
+    }
+}
